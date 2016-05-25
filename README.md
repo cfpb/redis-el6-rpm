@@ -44,7 +44,7 @@ Install the built RPM by running "sudo yum install RPMS/x86_64/redis-3.0.7-1.el6
 
 ## Configuration
 
-    Edit the SPEC file (SPEC/redis.spec) to make necessary changes to the build configuration
+    Edit the SPEC file ($HOME/rpmbuild/SPEC/redis.spec) to make necessary changes to the build configuration
 
 =======
 
