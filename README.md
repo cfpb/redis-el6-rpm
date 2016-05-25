@@ -1,4 +1,4 @@
-# HAMMERDB 2.19 RPM built for RHEL 6.5
+# REDIS-3.0.7 RPM built for RHEL 6.5
 
 **Description**:  
 Redis is a key-value database. It is similar to memcached but the dataset is not volatile, and values can be strings, exactly like in memcached, but also
