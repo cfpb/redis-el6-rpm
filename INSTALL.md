@@ -14,7 +14,7 @@ Build RPM on server
 
 1. Once repo is cloned, run "sh ./bootstrap.sh"
 2. cd to ~/rpmbuild 
-3. Run "rpmbuild -ba /SPECS/redis.spec"
+3. Run "rpmbuild -ba SPECS/redis.spec"
 
 Installing the RPM 
 
