@@ -7,7 +7,6 @@ Group:		Application/Databases
 License:	BSD
 URL:		http://redis.io
 Source0:	http://download.redis.io/releases/redis-3.0.7.tar.gz
-Requires:	tclsh8.5
 Obsoletes: 	redis <= 3.0.7
 Provides:	redis => 3.0.7
 
@@ -42,5 +41,4 @@ sudo make install
 
 
 
-%changelog
 
