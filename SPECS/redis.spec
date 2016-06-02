@@ -1,14 +1,16 @@
-Name:		redis
-Version:	3.0.7
-Release:	1%{?dist}
-Summary:	A persistent key-value database
+%global _version	3.0.7
 
-Group:		Application/Databases
-License:	BSD
-URL:		http://redis.io
-Source0:	http://download.redis.io/releases/redis-3.0.7.tar.gz
-Obsoletes: 	redis <= 3.0.7
-Provides:	redis => 3.0.7
+Name:			redis	
+Version:		%{_version}
+Release:		1%{?dist}
+Summary:		A persistent key-value database
+
+Group:			Application/Databases
+License:		BSD
+URL:			http://redis.io
+Source0:		http:download.redis.io/releases/redis-3.0.7.tar.gz
+
+Provides:		redis == 3.0.7	
 
 %description
 Redis is a key-value database. It is similar to memcached but the dataset is not volatile, and values can be strings, exactly like in memcached, but also
@@ -22,23 +24,30 @@ Compression and other interesting features are a work in progress. Redis is writ
 and so on. Redis is free software released under the very liberal BSD license.
 
 
+BuildRoot: %(mktemp -ud %{_tmppath}/build/%{name}-%{version}-%{release}-XXXXXX)
 
 %prep
 %setup -q 
 
 
 %build
+make %{?_smp_mflags}
 
-make %{?_smp_mflags} 
-make test
 
 %install
-sudo make install
-
+make install PREFIX=${RPM_BUILD_ROOT}/usr/local 
 
 %files
+/usr/local/bin/redis-benchmark
+/usr/local/bin/redis-check-aof
+/usr/local/bin/redis-check-dump
+/usr/local/bin/redis-cli
+/usr/local/bin/redis-sentinel
+/usr/local/bin/redis-server
+
 %doc
 
 
 
+%changelog
 
