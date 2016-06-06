@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 sudo yum -y groupinstall 'Development Tools'
-sudo yum -y install tcl tree vim
+sudo yum -y install tcl 
 
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
